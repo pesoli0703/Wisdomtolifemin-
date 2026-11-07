@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+.dark {
+  --rush-bg: 5 8 22;
+  --rush-surface: 11 17 43;
+  --rush-card: 15 23 56;
+  --rush-border: 36 52 105;
+  --rush-text: 248 250 255;
+  --rush-muted: 148 163 196;
+  color-scheme: dark;
+}
+
+.light {
+  --rush-bg: 241 245 253;
+  --rush-surface: 255 255 255;
+  --rush-card: 246 249 255;
+  --rush-border: 203 216 242;
+  --rush-text: 12 18 42;
+  --rush-muted: 78 93 128;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: rgb(var(--rush-bg));
+  color: rgb(var(--rush-text));
+  font-family: 'Space Grotesk Variable', system-ui, -apple-system, sans-serif;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Futuristic subtle cyber-grid backdrop */
+.rush-cyber-bg {
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(0, 229, 255, 0.12), transparent 36%),
+    radial-gradient(circle at 84% 16%, rgba(168, 85, 247, 0.13), transparent 38%),
+    radial-gradient(circle at 50% 88%, rgba(255, 122, 0, 0.08), transparent 42%),
+    linear-gradient(rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 44px 44px, 44px 44px;
+}
+
+/* Mobile-first zero-latency tactile circular game pad */
+.rush-pad {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* iOS fullscreen pseudo-viewport fallback when Fullscreen API is unavailable */
+.rush-ios-fullscreen {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 80 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  overflow-y: auto !important;
+  background-color: #050816 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

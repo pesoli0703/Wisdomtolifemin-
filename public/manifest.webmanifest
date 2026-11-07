@@ -1,0 +1,30 @@
+{
+  "name": "PUSH RUSH — Think Fast. Tap Faster. Beat the Clock.",
+  "short_name": "PUSH RUSH",
+  "description": "Futuristic online reaction-speed and brain-training gaming platform with 8 competitive modes, daily challenges, and global leaderboards.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "categories": ["games", "entertainment", "education"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
